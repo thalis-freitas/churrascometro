@@ -173,6 +173,10 @@ h4{
     background-color: #789c50;
 }
 
+#btn-calcular:hover{
+    background-color: #96C362;;
+}
+
 #resultados{
     width: 100%;
     position: relative;
@@ -285,7 +289,7 @@ a:hover{
 
     footer {
         padding-bottom: 7px;
-        top: 680px;
+        top: 683px;
     }
 
 }
@@ -371,7 +375,7 @@ top: 45px;
     }
 
     footer {
-        top: 795px;
+        top: 800px;
     }
 }
 
@@ -446,6 +450,10 @@ top: 45px;
         text-indent: 65px;
     }
 
+    h4{
+        text-align: center;
+    }
+
     .modo{
         right: -3px;
     }
@@ -491,7 +499,7 @@ top: 45px;
     footer {
         width: 270px;
         font-size: 0.9em;
-        top: 840px;
+        top: 845px;
     }
 
 }
