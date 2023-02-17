@@ -1,0 +1,506 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+li{
+    list-style-position: inside;
+    font-size: 1em;
+    position: relative;
+}
+
+    .icon-carne{
+        list-style-image: url(./imagens-icones/icone-carne.png);
+    }
+    .icon-cerveja{
+        list-style-image: url(./imagens-icones/icone-cerveja.png)
+    }
+    .icon-suco{
+        list-style-image: url(./imagens-icones/icone-suco.png);
+    }
+    #icon-adultos{
+        list-style-image: url(./imagens-icones/icone-adulto.png);
+    }
+    #icon-criancas{
+        list-style-image: url(./imagens-icones/icone-crianca.png);
+    }
+    #icon-duracao{
+        list-style-image: url(./imagens-icones/icone-duracao.png);
+    }
+   
+#churrascometro{
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn{
+    color: white;
+    border-color: #7f7f7f;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    border: 1px solid;
+    position: relative;
+    top: 6vh;
+    padding: 9px;
+    width: 600px;
+    border-radius: 20px;
+    line-height: -2;
+}
+
+.medidas-apresentacao{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 240px;
+}
+
+#imagem{
+    transform: rotate(-20deg);
+    position: relative;
+    right: 20px;
+    top: 25px;
+}
+
+h1{
+    display: inline-block;
+    font-family: 'Amatic SC', cursive;
+    position: absolute;
+    padding: 5px;
+    top: 10px;
+    font-size: 3em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* botão configurações */
+#configuracoes{
+    list-style-type: none;
+    cursor: pointer;
+    position: absolute;
+    padding: 0px;
+    right: 50px;
+    top: 35px;
+}
+
+    .area-configuracoes{
+        position: relative;
+        left: 15%;
+    }
+
+.modo{
+        border: 0;
+        border-radius: 50%;
+        position: absolute;
+        padding: 16px;
+        right: 15px;
+        cursor: pointer;
+        margin: 0;
+        top: 35px;
+        background-color: transparent;
+}
+
+    #modo-escuro{
+        background-image: url(./imagens-icones/icone-lua.png);
+    }
+
+    #modo-claro{
+        background-image: url(./imagens-icones/icone-sol.png);
+    }
+
+h2, h3{
+    padding: 5px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+h2{
+    font-size: 1.2em;
+    line-height: 18px;
+}
+
+#h2-configuracoes{
+    max-width: 400px;
+    margin: auto;
+}
+
+h3{
+    font-size: 1.1em;
+    text-align: center;
+}
+
+h4{
+    font-size: 1em;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+#btn-comecar{
+    position: relative;
+    left: 505px;
+    background-color: #c4362f;
+    bottom: 10px;
+}
+
+#btn-comecar:hover, #btn-voltar:hover{
+    background-color: #ef4135;
+}
+
+#area-calculo{
+    position: relative;
+    left: 60%;
+    transform: translateX(-50%);
+    max-width: 450px;
+}
+
+#btn-calcular{
+    margin: 15px 0;
+    position: relative;
+    left: 255px;
+    background-color: #789c50;
+}
+
+#btn-calcular:hover{
+    background-color: #96C362;;
+}
+
+#resultados{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    top: 40px;
+    font-size: 1.1em;
+    padding-bottom: 20px;
+    margin-top: 10px;
+}
+
+input{
+    display: inline-block;
+    padding: 2px;
+    border-radius: 5px;
+    position: absolute;
+    width: 20%;
+    right: 30%;
+    top: 15px;
+}
+
+#btn-salvar{
+    margin: 15px 0;
+    position: relative;
+    left: 450px;
+    background-color: #789c50;
+}
+
+#btn-salvar:hover{
+    background-color: #96C362;
+}
+
+#btn-voltar{
+    margin-top: 15px;
+    position: relative;
+    left: 320px;
+    background-color: #c4362f;
+}
+
+#logo-github{
+    float: left;
+    margin-left: 8px;
+}
+
+footer {
+    padding-bottom: 5px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    text-align: center;
+    top: 710px;
+    color: white;
+    text-shadow: 2px 2px 5px #c4362f;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: white;
+}
+
+@media screen and (max-width: 700px){
+    .container{
+        width: 400px;
+    }
+    h2{
+        font-size: 1.1em;
+    }
+    
+    h3, h4{
+        font-size: 0.9em;
+    }
+    li{
+        font-size: 0.9em;
+
+    }
+
+    input{
+        right: 12%;
+    }
+
+    .area-configuracoes{
+        position: relative;
+        left: 5%;
+    }
+
+    #btn-comecar{
+        left: 310px;
+    }
+
+    #btn-salvar{
+        left: 310px;
+    }
+
+    #btn-voltar{
+        left: 180px;
+    }
+
+    #area-calculo{
+        left: 50%;
+        text-indent: 50px;
+    }
+
+    #btn-calcular{
+        left: 160px;
+    }
+
+    footer {
+        padding-bottom: 7px;
+        top: 683px;
+    }
+
+}
+
+@media screen and (max-width: 570px){
+
+h1{
+    font-size: 2.5em;
+    top: 25px;
+}
+
+#imagem{
+    left: 10px;
+}
+
+.modo{
+    right: 35px;
+    top: 45px;
+}
+
+#configuracoes{
+right: 70px;
+top: 45px;
+}
+
+.container{
+    position: relative;
+    top: 45px;
+}
+}
+
+@media screen and (max-width: 460px){
+    .container{
+        width: 340px;
+    }
+
+    
+    h1{
+        text-indent: 15px;
+        letter-spacing: -3px;
+    }
+
+    .modo{
+        top: 40px;
+        right: 15px;
+    }
+    
+    #configuracoes{
+        top: 40px; 
+        right: 45px;
+    }
+
+    #btn-comecar{
+        margin-top: 10px;
+        left: 245px;
+    }
+
+    #btn-salvar{
+        left: 280px;
+    }
+    
+    #btn-voltar{
+        left: 150px;
+    }
+
+    #btn-calcular{
+        left: 135px;
+    }
+
+    #area-calculo{
+        left: 45%;
+        text-indent: 20px;
+        max-width: 300px;
+    }
+
+    .area-configuracoes{
+        position: relative;
+        left: 0%;
+        font-size: 0.8em;
+    }
+    input{
+        right: 0%;
+    }
+
+    footer {
+        top: 800px;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .container{
+        width: 270px;
+    }
+    
+    h1{
+        text-indent: 60px;
+    }
+
+    .modo{
+        top: 25px;
+        right: 5px;
+    }
+    
+    #configuracoes{
+    top: 55px; 
+    right: 5px;
+    }
+
+    #imagem{
+        left: -5px;
+    }
+
+    #btn-comecar{
+        left: 180px;
+    }
+
+    #btn-salvar{
+        left: 210px;
+    }
+    
+    #btn-voltar{
+        left: 80px;
+    }
+
+    #btn-calcular{
+        left: 100px;
+    }
+
+    #area-calculo{
+        left: 45%;
+        text-indent: 12px;
+        max-width: 300px;
+    }
+
+    .area-configuracoes{
+        position: relative;
+        left: 0%;
+    }
+    
+    input{
+        right: 0%;
+        width: 20%;
+    }
+
+    footer {
+        top: 810px;
+    }
+
+}
+
+@media screen and (max-width: 330px){
+
+    .container{
+        width: 245px;
+    }
+    
+    h1{
+        text-indent: 65px;
+    }
+
+    h4{
+        text-align: center;
+    }
+
+    .modo{
+        right: -3px;
+    }
+    
+    #configuracoes{
+    right: -3px;
+    }
+
+    #imagem{
+        left: 7px;
+        width: 32%;
+    }
+
+    #btn-comecar{
+        left: 160px;
+    }
+
+    #btn-salvar{
+        left: 190px;
+    }
+    
+    #btn-voltar{
+        left: 60px;
+    }
+
+    #btn-calcular{
+        left: 90px;
+    }
+
+    #area-calculo{
+        max-width: 250px;
+    }
+
+    input{
+        right: 0%;
+        width: 15%;
+    }
+
+    .area-configuracoes{
+        font-size: 0.73em;
+    }
+
+    footer {
+        width: 270px;
+        font-size: 0.9em;
+        top: 845px;
+    }
+
+}
+ 
