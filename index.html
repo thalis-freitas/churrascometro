@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -14,116 +14,109 @@
 </head>
 
 <body>
-    <div id="churrascometro">
-        <img src="./imagens-icones/churrasco.png" alt="ilustração" width="100px" id="imagem">
+    <main>
+        <img src="./imagens-icones/churrasco.png" alt="ilustração" id="logo" width="100px">
         <h1>Churrascômetro</h1>
 
-        <ul>
-            <!-- botão para exibir as opções de personalização das medidas para o churrasco -->
-            <li onclick="personalizar()" id="configuracoes"><img src="./imagens-icones/icone-configurações.svg" alt="configuracoes"></li>
-        </ul>
+        <div id="settings">
+            <img src="./imagens-icones/icone-configurações.svg" alt="configurações">
+        </div>
 
-        <!-- botões que irão trocar a cor de background e da fonte -->
-        <button class="modo" id="modo-escuro" onclick="modoEscuro()"></buttonclass> </button>
-        <button class="modo" id="modo-claro" onclick="modoClaro()"></button>
+        <button class="mode" id="dark-mode"></button>
+        <button class="mode" id="light-mode"></button>
 
-        <!-- div com o conteúdo do quadro de configurações -->
-        <div class="container" id="container-configuracoes">
-
+        <div class="container" id="settings-area">
             <div>
-                <h2 id="h2-configuracoes">Após inserir as medidas que deseja clique em salvar para alterar.</h2>
+                <h2>Após inserir as medidas que deseja clique em salvar para alterar.</h2>
                 <h3>Para duração de até 6 horas:</h3>
-                <div class="area-configuracoes">
+                <div class="settings-area">
                     <ul>
-                        <li class="icon-carne">Quantidade de carne em g
-                            <input id="alterar-carne-menor-duracao" type="number" value="450">
+                        <li class="icon-meat">Quantidade de carne em g
+                            <input id="edit-minor-meat" type="number" value="450">
                         </li>
-                        <li class="icon-cerveja">Quantidade de cerveja em L
-                            <input id="alterar-cerveja-menor-duracao" type="number" value="1.2">
+                        <li class="icon-beer">Quantidade de cerveja em L
+                            <input id="edit-minor-beer" type="number" value="1.2">
                         </li>
-                        <li class="icon-suco">Quantidade de refri/suco em L
-                            <input id="alterar-bebidas-menor-duracao" type="number" value="1.0">
+                        <li class="icon-drinks">Quantidade de refri/suco em L
+                            <input id="edit-minor-drinks" type="number" value="1.0">
                         </li>
                     </ul>
                 </div>
             </div>
             <div>
                 <h3> Para duração de mais de 6 horas:</h3>
-                <div class="area-configuracoes">
+                <div class="settings-area">
                     <ul>
-                        <li class="icon-carne">Quantidade de carne em g
-                            <input id="alterar-carne-maior-duracao" type="number" value="650">
+                        <li class="icon-meat">Quantidade de carne em g
+                            <input id="edit-bigger-meat" type="number" value="650">
                         </li>
-                        <li class="icon-cerveja">Quantidade de cerveja em L
-                            <input id="alterar-cerveja-maior-duracao" type="number" value="2.0">
+                        <li class="icon-beer">Quantidade de cerveja em L
+                            <input id="edit-bigger-beer" type="number" value="2.0">
                         </li>
-                        <li class="icon-suco">Quantidade de refri/suco em L
-                            <input id="alterar-bebidas-maior-duracao" type="number" value="1.5">
+                        <li class="icon-drinks">Quantidade de refri/suco em L
+                            <input id="edit-bigger-drinks" type="number" value="1.5">
                         </li>
                     </ul>
                 </div>
-                <button class="btn" onclick="salvar()" id="btn-salvar">Salvar</button>
-
-                <button class="btn" id="btn-voltar" onclick="voltar()">Voltar</button>
+                <button class="btn" id="to-save">Salvar</button>
+                <button class="btn" id="go-back">Voltar</button>
             </div>
         </div>
 
-        <!-- div com o conteúdo da página inicial -->
-        <div class="container" id="container-apresentacao">
-            <h2> Desenvolvido para calcular a quantidade ideal de carne e bebidas para o churrasco usando como parâmetro
-                seguintes valores:</h2>
+        <div class="container" id="presentation-area">
+            <h2> Desenvolvido para calcular a quantidade ideal de carne e bebidas para o churrasco usando como parâmetro os seguintes valores:</h2>
             <h3>Porção por adulto para duração de até 6 horas:</h3>
 
-            <div class="medidas-apresentacao">
+            <div class="measures-presentation">
                 <ul>
-                    <li class="icon-carne"> 450g de carne</li>
-                    <li class="icon-cerveja">1.2L de cerveja</li>
-                    <li class="icon-suco">1.0L de refrigerante/suco</li>
+                    <li class="icon-meat"> 450g de carne</li>
+                    <li class="icon-beer">1.2L de cerveja</li>
+                    <li class="icon-drinks">1.0L de refrigerante/suco</li>
                 </ul>
             </div>
             <h3>Porção por adulto para duração de mais de 6 horas:</h3>
-            <div class="medidas-apresentacao">
+            <div class="measures-presentation">
                 <ul>
-                    <li class="icon-carne">650g de carne</li>
-                    <li class="icon-cerveja">2.0L de cerveja</li>
-                    <li class="icon-suco">1.5L de refrigerante/suco</li>
+                    <li class="icon-meat">650g de carne</li>
+                    <li class="icon-beer">2.0L de cerveja</li>
+                    <li class="icon-drinks">1.5L de refrigerante/suco</li>
                 </ul>
             </div>
-            <h4> A porção para crianças foi definida como metade da porção de carne e refrigerante/suco dos adultos;
-            </h4>
+            <h4> A porção para crianças foi definida como metade da porção de carne e refrigerante/suco dos adultos;</h4>
             <h4> Se preferir personalisar as medidas de consumo por pessoa clique no ícone de configurações.</h4>
-
-            <button class="btn" onclick="iniciar()" id="btn-comecar">Vamos lá!</button>
-            </p>
+            <button class="btn" id="start">Vamos lá!</button>
         </div>
 
-        <!-- área de cálculo do churrascômetro -->
-        <div class="container" id="container-calculo">
+        <div class="container" id="calculation-area">
             <h2>Preencha os campos abaixo:</h2>
-            <div id="area-calculo">
-                <li id="icon-adultos">Número de adultos:
-                    <input type="number" name="adultos" id="adultos" placeholder="Adultos">
-                </li>
-                <li id="icon-criancas">Número de crianças:
-                    <input type="number" name="criancas" id="criancas" placeholder="Crianças">
-                </li>
-                <li id="icon-duracao">Tempo em horas:
-                    <input type="number" name="duracao" id="duracao" placeholder="Duração">
-
+            <div id="area-calculation">
+                <ul>
+                    <li id="icon-adults">Número de adultos:
+                        <input type="number" id="adults" placeholder="Adultos">
+                    </li>
+                    <li id="icon-children">Número de crianças:
+                        <input type="number" id="children" placeholder="Crianças">
+                    </li>
+                    <li id="icon-duration">Tempo em horas:
+                        <input type="number" id="duration" placeholder="Duração">
+                    </li>
+                </ul>
             </div>
-            <button class="btn" onclick="calcular()" id="btn-calcular">Calcular</button>
+            <button class="btn" id="calculate">Calcular</button>
         </div>
 
-        <div class="" id="resultados">  
+        <div id="results"></div>
 
-        </div>
-
-        <footer><a href="https://github.com/Thalis-Freitas" target="_blank"><img id="logo-github" src="./imagens-icones/icons8-github-24.png" alt="">
-            <p> Desenvolvido por: <b>Thalis Freitas </b> </p> </a>
+        <footer>
+            <a href="https://github.com/Thalis-Freitas" target="_blank">
+                <img id="logo-github" src="./imagens-icones/icons8-github-24.png" alt="logo-github">
+                <p>Desenvolvido por:
+                    <b>Thalis Freitas </b>
+                </p>
+            </a>
         </footer>
     
-    </div>
+    </main>
     <script src="./script.js"></script>
 </body>
-
 </html>

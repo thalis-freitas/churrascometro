@@ -16,26 +16,26 @@ li{
     position: relative;
 }
 
-    .icon-carne{
-        list-style-image: url(./imagens-icones/icone-carne.png);
-    }
-    .icon-cerveja{
-        list-style-image: url(./imagens-icones/icone-cerveja.png)
-    }
-    .icon-suco{
-        list-style-image: url(./imagens-icones/icone-suco.png);
-    }
-    #icon-adultos{
-        list-style-image: url(./imagens-icones/icone-adulto.png);
-    }
-    #icon-criancas{
-        list-style-image: url(./imagens-icones/icone-crianca.png);
-    }
-    #icon-duracao{
-        list-style-image: url(./imagens-icones/icone-duracao.png);
-    }
+.icon-meat{
+    list-style-image: url(./imagens-icones/icone-carne.png);
+}
+.icon-beer{
+    list-style-image: url(./imagens-icones/icone-cerveja.png)
+}
+.icon-drinks{
+    list-style-image: url(./imagens-icones/icone-suco.png);
+}
+#icon-adults{
+    list-style-image: url(./imagens-icones/icone-adulto.png);
+}
+#icon-children{
+    list-style-image: url(./imagens-icones/icone-crianca.png);
+}
+#icon-duration{
+    list-style-image: url(./imagens-icones/icone-duracao.png);
+}
    
-#churrascometro{
+main{
     display: inline-block;
     position: absolute;
     left: 50%;
@@ -61,14 +61,14 @@ li{
     line-height: -2;
 }
 
-.medidas-apresentacao{
+.measures-presentation{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     max-width: 240px;
 }
 
-#imagem{
+#logo{
     transform: rotate(-20deg);
     position: relative;
     right: 20px;
@@ -86,9 +86,7 @@ h1{
     transform: translateX(-50%);
 }
 
-/* botão configurações */
-#configuracoes{
-    list-style-type: none;
+#settings{
     cursor: pointer;
     position: absolute;
     padding: 0px;
@@ -96,12 +94,12 @@ h1{
     top: 35px;
 }
 
-    .area-configuracoes{
-        position: relative;
-        left: 15%;
-    }
+.settings-area{
+    position: relative;
+    left: 15%;
+}
 
-.modo{
+.mode{
         border: 0;
         border-radius: 50%;
         position: absolute;
@@ -113,13 +111,13 @@ h1{
         background-color: transparent;
 }
 
-    #modo-escuro{
-        background-image: url(./imagens-icones/icone-lua.png);
-    }
+#dark-mode{
+    background-image: url(./imagens-icones/icone-lua.png);
+}
 
-    #modo-claro{
-        background-image: url(./imagens-icones/icone-sol.png);
-    }
+#light-mode{
+    background-image: url(./imagens-icones/icone-sol.png);
+}
 
 h2, h3{
     padding: 5px;
@@ -132,7 +130,7 @@ h2{
     line-height: 18px;
 }
 
-#h2-configuracoes{
+#settings-area h2{
     max-width: 400px;
     margin: auto;
 }
@@ -148,36 +146,36 @@ h4{
     text-align: justify;
 }
 
-#btn-comecar{
+#start{
     position: relative;
     left: 505px;
     background-color: #c4362f;
     bottom: 10px;
 }
 
-#btn-comecar:hover, #btn-voltar:hover{
+#start:hover, #go-back:hover{
     background-color: #ef4135;
 }
 
-#area-calculo{
+#area-calculation{
     position: relative;
     left: 60%;
     transform: translateX(-50%);
     max-width: 450px;
 }
 
-#btn-calcular{
+#calculate{
     margin: 15px 0;
     position: relative;
     left: 255px;
     background-color: #789c50;
 }
 
-#btn-calcular:hover{
+#calculate:hover{
     background-color: #96C362;;
 }
 
-#resultados{
+#results{
     width: 100%;
     position: relative;
     text-align: center;
@@ -197,18 +195,18 @@ input{
     top: 15px;
 }
 
-#btn-salvar{
+#to-save{
     margin: 15px 0;
     position: relative;
     left: 450px;
     background-color: #789c50;
 }
 
-#btn-salvar:hover{
+#to-save:hover{
     background-color: #96C362;
 }
 
-#btn-voltar{
+#go-back{
     margin-top: 15px;
     position: relative;
     left: 320px;
@@ -261,64 +259,63 @@ a:hover{
         right: 12%;
     }
 
-    .area-configuracoes{
+    .settings-area{
         position: relative;
         left: 5%;
     }
 
-    #btn-comecar{
+    #start{
         left: 310px;
     }
 
-    #btn-salvar{
+    #to-save{
         left: 310px;
     }
 
-    #btn-voltar{
+    #go-back{
         left: 180px;
     }
 
-    #area-calculo{
+    #area-calculation{
         left: 50%;
         text-indent: 50px;
     }
 
-    #btn-calcular{
+    #calculate{
         left: 160px;
     }
 
     footer {
         padding-bottom: 7px;
-        top: 683px;
+        top: 700px;
     }
 
 }
 
 @media screen and (max-width: 570px){
+    h1{
+        font-size: 2.5em;
+        top: 25px;
+    }
 
-h1{
-    font-size: 2.5em;
-    top: 25px;
-}
+    #logo{
+        left: 10px;
+    }
 
-#imagem{
-    left: 10px;
-}
+    .mode{
+        right: 35px;
+        top: 45px;
+    }
 
-.modo{
-    right: 35px;
+    #settings{
+    right: 70px;
     top: 45px;
-}
+    }
 
-#configuracoes{
-right: 70px;
-top: 45px;
-}
-
-.container{
-    position: relative;
-    top: 45px;
-}
+    .container{
+        position: relative;
+        top: 45px;
+    }
 }
 
 @media screen and (max-width: 460px){
@@ -332,40 +329,40 @@ top: 45px;
         letter-spacing: -3px;
     }
 
-    .modo{
+    .mode{
         top: 40px;
         right: 15px;
     }
     
-    #configuracoes{
+    #settings{
         top: 40px; 
         right: 45px;
     }
 
-    #btn-comecar{
+    #start{
         margin-top: 10px;
         left: 245px;
     }
 
-    #btn-salvar{
+    #to-save{
         left: 280px;
     }
     
-    #btn-voltar{
+    #go-back{
         left: 150px;
     }
 
-    #btn-calcular{
+    #calculate{
         left: 135px;
     }
 
-    #area-calculo{
+    #area-calculation{
         left: 45%;
         text-indent: 20px;
         max-width: 300px;
     }
 
-    .area-configuracoes{
+    .settings-area{
         position: relative;
         left: 0%;
         font-size: 0.8em;
@@ -388,43 +385,43 @@ top: 45px;
         text-indent: 60px;
     }
 
-    .modo{
+    .mode{
         top: 25px;
         right: 5px;
     }
     
-    #configuracoes{
+    #settings{
     top: 55px; 
     right: 5px;
     }
 
-    #imagem{
+    #logo{
         left: -5px;
     }
 
-    #btn-comecar{
+    #start{
         left: 180px;
     }
 
-    #btn-salvar{
+    #to-save{
         left: 210px;
     }
     
-    #btn-voltar{
+    #go-back{
         left: 80px;
     }
 
-    #btn-calcular{
+    #calculate{
         left: 100px;
     }
 
-    #area-calculo{
+    #area-calculation{
         left: 45%;
         text-indent: 12px;
         max-width: 300px;
     }
 
-    .area-configuracoes{
+    .settings-area{
         position: relative;
         left: 0%;
     }
@@ -441,7 +438,6 @@ top: 45px;
 }
 
 @media screen and (max-width: 330px){
-
     .container{
         width: 245px;
     }
@@ -454,36 +450,36 @@ top: 45px;
         text-align: center;
     }
 
-    .modo{
+    .mode{
         right: -3px;
     }
     
-    #configuracoes{
+    #settings{
     right: -3px;
     }
 
-    #imagem{
+    #logo{
         left: 7px;
         width: 32%;
     }
 
-    #btn-comecar{
+    #start{
         left: 160px;
     }
 
-    #btn-salvar{
+    #to-save{
         left: 190px;
     }
     
-    #btn-voltar{
+    #go-back{
         left: 60px;
     }
 
-    #btn-calcular{
+    #calculate{
         left: 90px;
     }
 
-    #area-calculo{
+    #area-calculation{
         max-width: 250px;
     }
 
@@ -492,7 +488,7 @@ top: 45px;
         width: 15%;
     }
 
-    .area-configuracoes{
+    .settings-area{
         font-size: 0.73em;
     }
 
@@ -503,4 +499,3 @@ top: 45px;
     }
 
 }
- 

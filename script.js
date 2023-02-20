@@ -1,165 +1,127 @@
-var adultos = 0
-var criancas = 0
-var duracao = 0
+let meat = 0
+let beer = 0
+let drinks = 0
+let meatForLessTime = 450
+let beerForLessTtime = 1.2
+let drinksForLessTtime = 1
+let meatForBiggerTime = 650
+let beerForBiggerTimes = 2
+let drinksForBiggerTime = 1.5
+let adults = document.getElementById('adults')
+let children = document.getElementById('children')
+let duration = document.getElementById('duration')
+let presentationArea = document.getElementById('presentation-area')
+let calculationArea = document.getElementById('calculation-area')
+let results = document.getElementById('results')
+let settingsArea = document.getElementById('settings-area')
 
-var carne = 0
-var cerveja = 0
-var bebidas = 0
+settingsArea.style.display = 'none'
+calculationArea.style.display = 'none'
 
-// variáveis com quantidades de carne, cerveja e bebidas para duração de até 6 horas
+document.querySelector('#settings').addEventListener('click', ()=>{
+    settingsArea.style.display = 'inline-block'
+    presentationArea.style.display = 'none'
+    calculationArea.style.display = 'none'
+    results.style.display = 'none'
+    settings.style.display = 'none'
+})
 
-carneMenos = 450
-cervejaMenos = 1.2
-bebidasMenos = 1
+document.querySelector('#go-back').addEventListener('click', ()=>{
+    settingsArea.style.display = 'none'
+    presentationArea.style.display = 'none'
+    calculationArea.style.display = 'inline-block'
+    settings.style.display = 'inline-block'
+})
 
-// variáveis com quantidades de carne, cerveja e bebidas para duração de mais de 6 horas
+document.querySelector('#to-save').addEventListener('click', ()=>{
+    settings.style.display = 'inline-block'
 
-carneMais = 650
-cervejaMais = 2
-bebidasMais = 1.5
+    let editMinorMeat = document.getElementById('edit-minor-meat')
+    let editMinorBeer = document.getElementById('edit-minor-beer')
+    let editMinorDrinks = document.getElementById('edit-minor-drinks')
 
-// variáveis dos inputs da área de cálculo
+    let editBiggerMeat = document.getElementById('edit-bigger-meat')
+    let editBiggerBeer = document.getElementById('edit-bigger-beer')
+    let editBiggerDrinks = document.getElementById('edit-bigger-drinks')
 
-adultos = document.getElementById("adultos")
-criancas = document.getElementById("criancas")
-duracao = document.getElementById("duracao")
-
-var btnComecar = document.getElementById("btn-comecar")
-var btnCalcular = document.getElementById("btn-calcular")
-
-var containerApresentacao = document.getElementById("container-apresentacao")
-var containerCalculo = document.getElementById("container-calculo")
-var resultados = document.getElementById("resultados")
-var containerConfiguracoes = document.getElementById("container-configuracoes")
-
-containerConfiguracoes.style.display = "none"
-
-// função que irá exibir a área de configurações quando o ícone de configurações for clicado
-
-function personalizar() {
-    containerConfiguracoes.style.display = "inline-block"
-    containerApresentacao.style.display = "none"
-    containerCalculo.style.display = "none"
-    resultados.style.display = "none"
-
-    var configuracoes = document.getElementById("configuracoes")
-    configuracoes.style.display = "none"
-}
-
-
-function voltar() {
-    containerConfiguracoes.style.display = "none"
-    containerApresentacao.style.display = "none"
-    containerCalculo.style.display = "inline-block"
-    configuracoes.style.display = "inline-block"
-}
-
-// função que irá salvar as informações inseridas no input como quantidades padrão para o cálculo
-function salvar() {
-    configuracoes.style.display = "inline-block"
-
-    let alterarCarneMenorDuracao = document.getElementById("alterar-carne-menor-duracao")
-    let alterarCervejaMenorDuracao = document.getElementById("alterar-cerveja-menor-duracao")
-    let alterarBebidasMenorDuracao = document.getElementById("alterar-bebidas-menor-duracao")
-
-    let alterarCarneMaiorDuracao = document.getElementById("alterar-carne-maior-duracao")
-    let alterarCervejaMaiorDuracao = document.getElementById("alterar-cerveja-maior-duracao")
-    let alterarBebidasMaiorDuracao = document.getElementById("alterar-bebidas-maior-duracao")
-
-    // condição para não aceitar um valor menor ou igual a zero
-    if (alterarCarneMenorDuracao.value <= 0 || alterarCervejaMenorDuracao.value <= 0 || alterarBebidasMenorDuracao.value <= 0 || alterarCarneMaiorDuracao.value <= 0 || alterarCervejaMaiorDuracao.value <= 0 || alterarBebidasMaiorDuracao.value <= 0) {
-        alert("Ops... \nPor favor verifique se inseriu as medidas corretamente, o churrascômetro não aceita valores nulos ou negativos.")
+    if (editMinorMeat.value <= 0 ||
+        editMinorBeer.value <= 0 ||
+        editMinorDrinks.value <= 0 ||
+        editBiggerMeat.value <= 0 ||
+        editBiggerBeer.value <= 0 ||
+        editBiggerDrinks.value <= 0){
+        alert('Ops... \nPor favor verifique se inseriu as medidas corretamente, o churrascômetro não aceita valores nulos ou negativos.')
     }
 
     else {
-        carneMenos = alterarCarneMenorDuracao.value
-        cervejaMenos = alterarCervejaMenorDuracao.value
-        bebidasMenos = alterarBebidasMenorDuracao.value
+        meatForLessTime = editMinorMeat.value
+        beerForLessTtime = editMinorBeer.value
+        drinksForLessTtime = editMinorDrinks.value
 
-        carneMais = alterarCarneMaiorDuracao.value
-        cervejaMais = alterarCervejaMaiorDuracao.value
-        bebidasMais = alterarBebidasMaiorDuracao.value
+        meatForBiggerTime = editBiggerMeat.value
+        beerForBiggerTime = editBiggerBeer.value
+        drinksForBiggerTime = editBiggerDrinks.value
 
-        containerApresentacao.style.display = "none"
-        containerCalculo.style.display = "inline-block"
-        containerConfiguracoes.style.display = "none"
-        resultados.style.display = "inline-block"
+        presentationArea.style.display = 'none'
+        calculationArea.style.display = 'inline-block'
+        settingsArea.style.display = 'none'
+        results.style.display = 'inline-block'
     }
-}
+})
 
-// função para deixar o background escuro e as fontes claras quando o ícone for clicado
-function modoEscuro() {
-    document.body.style.background = "#333333"
-    document.body.style.color = "white"
+let lightMode = document.getElementById('light-mode')
+let darkMode = document.getElementById('dark-mode')
 
-    let btnModoEscuro = document.getElementById("modo-escuro")
-    let btnModoClaro = document.getElementById("modo-claro")
+darkMode.addEventListener('click', ()=>{
+    document.body.style.background = '#333333'
+    document.body.style.color = 'white'
+    darkMode.style.display = 'none'
+    lightMode.style.display = 'inline-block'
+})
 
-    btnModoEscuro.style.display = "none"
-    btnModoClaro.style.display = "inline-block"
-}
+lightMode.addEventListener('click', ()=>{
+    document.body.style.background = '#efefef'
+    document.body.style.color = 'black'
+    darkMode.style.display = 'inline-block'
+    lightMode.style.display = 'none'
+})
 
+document.querySelector('#start').addEventListener('click', ()=>{
+    presentationArea.style.display = 'none'
+    calculationArea.style.display = 'inline-block'
+})
 
-let btnModoClaro = document.getElementById("modo-claro")
-
-btnModoClaro.style.display = "none"
-document.body.style.background = "#efefef"
-
-// função para deixar o background claro e as fontes escuras quando o ícone for clicado
-function modoClaro() {
-    document.body.style.background = "#efefef"
-    document.body.style.color = "black"
-
-    let btnModoClaro = document.getElementById("modo-claro")
-    let btnModoEscuro = document.getElementById("modo-escuro")
-
-    btnModoEscuro.style.display = "inline-block"
-    btnModoClaro.style.display = "none"
-}
-
-containerCalculo.style.display = "none"
-
-// função que irá direcionar para a área de cálculo quando o botão for clicado 
-function iniciar() {
-    containerApresentacao.style.display = "none"
-    containerCalculo.style.display = "inline-block"
-}
-
-// função para mostrar o resultado da quantidade da carne em g se for até 999 e em kg se for maior ou igual a 1000
-function medidaCarne() {
-    if (carne < 1000) {
-        resultados.innerHTML = "<h3>" + "A quantidade ideal para o churrasco é de: " + "</h3>" + "<p>" + parseInt(carne) + "g de carne" + "</p>" + "<p>" + cerveja + "L de cerveja" + "</p>" + "<p>" + bebidas + "L de refrigerante/suco" + "</p>"
+function meatWeightFormat() {
+    if (meat < 1000) {
+        results.innerHTML = '<h3>' + 'A quantidade ideal para o churrasco é de: ' + '</h3>' + '<p>' + parseInt(meat) + 'g de carne' + '</p>' + '<p>' + beer + 'L de cerveja' + '</p>' + '<p>' + drinks + 'L de refrigerante/suco' + '</p>'
     }
-    if (carne >= 1000)
-        resultados.innerHTML = "<h3>" + "A quantidade ideal para o churrasco é de: " + "</h3>" + "<p>" + (carne / 1000) + "kg de carne" + "</p>" + "<p>" + cerveja + "L de cerveja" + "</p>" + "<p>" + bebidas + "L de refrigerante/suco" + "</p>"
+    if (meat >= 1000)
+        results.innerHTML = '<h3>' + 'A quantidade ideal para o churrasco é de: ' + '</h3>' + '<p>' + (meat / 1000) + 'kg de carne' + '</p>' + '<p>' + beer + 'L de cerveja' + '</p>' + '<p>' + drinks + 'L de refrigerante/suco' + '</p>'
 }
 
-// função que irá executar o cálculo 
-function calcular() {
-    // condição para não permitir quantidade de adultos ou duração menor ou igual a 0 e de crianças menor que zero
-    if (adultos.value <= 0 || criancas.value < 0 || duracao.value <= 0) {
-        alert("Ops...\nPor favor verifique se inseriu os valores corretamente, é necessário ter no mínimo um adulto e 1 hora de duração.")
+document.querySelector('#calculate').addEventListener('click', ()=>{
+    if (adults.value <= 0 || children.value < 0 || duration.value <= 0) {
+        alert('Ops...\nPor favor verifique se inseriu os valores corretamente, é necessário ter no mínimo um adulto e 1 hora de duração.')
 
-        resultados.style.display = "none"
+        results.style.display = 'none'
     }
 
-    else if (duracao.value <= 6 && duracao.value > 0) {
-        carne = ((adultos.value * carneMenos) + (criancas.value * carneMenos * 0.5)).toFixed(2)
-        cerveja = (adultos.value * cervejaMenos).toFixed(1)
-        bebidas = ((adultos.value * bebidasMenos) + (criancas.value * bebidasMenos * 0.5)).toFixed(1)
+    else if (duration.value <= 6 && duration.value > 0) {
+        meat = ((adults.value * meatForLessTime) + (children.value * meatForLessTime * 0.5)).toFixed(2)
+        beer = (adults.value * beerForLessTtime).toFixed(1)
+        drinks = ((adults.value * drinksForLessTtime) + (children.value * drinksForLessTtime * 0.5)).toFixed(1)
 
-        resultados.style.display = "inline-block"
-        medidaCarne()
+        results.style.display = 'inline-block'
+        meatWeightFormat()
 
     }
 
-    else if (duracao.value > 6) {
-        carne = ((adultos.value * carneMais) + (criancas.value * carneMais * 0.5)).toFixed(2)
-        cerveja = (adultos.value * cervejaMais).toFixed(1)
-        bebidas = ((adultos.value * bebidasMais) + (criancas.value * bebidasMais * 0.5)).toFixed(1)
+    else if (duration.value > 6) {
+        meat = ((adults.value * meatForBiggerTime) + (children.value * meatForBiggerTime * 0.5)).toFixed(2)
+        beer = (adults.value * beerForBiggerTime).toFixed(1)
+        drinks = ((adults.value * drinksForBiggerTime) + (children.value * drinksForBiggerTime * 0.5)).toFixed(1)
 
-        resultados.style.display = "inline-block"
-        medidaCarne()
+        results.style.display = 'inline-block'
+        meatWeightFormat()
     }
-}
-
+})
