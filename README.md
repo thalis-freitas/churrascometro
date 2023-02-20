@@ -1,11 +1,27 @@
 # Churrascometro
-Página criada para desafio do curso de Desenvolvimento Web do Programador Br utilizando html, css e javascript.
 
-Link para a página: https://thalis-freitas.github.io/churrascometro/
+## :clipboard: Sobre o Projeto
 
-![Demonstração](https://github.com/Thalis-Freitas/churrascometro/blob/06b9c3aa5b9a12ec4b563968565b04dac4e4b8f5/demonstracao/imagem%20(3).png)
+Sitema para calcular a quantidade de comida e bebida necessária para um churrasco, com base nas informações seguintes:
 
-![Demonstração](https://github.com/Thalis-Freitas/churrascometro/blob/06b9c3aa5b9a12ec4b563968565b04dac4e4b8f5/demonstracao/imagem%20(11).png)
+* Carne - 400gr por pessoa + de 6horas - 650gr
 
-![Demonstração](https://github.com/Thalis-Freitas/churrascometro/blob/06b9c3aa5b9a12ec4b563968565b04dac4e4b8f5/demonstracao/imagem%20(18).png)
+* Cerveja - 1200ml por Pessoa + 6 horas - 2000ml
 
+* Refrigerante/água - 1000ml por pessoa + 6 horas 1500ml
+
+* Crianças valem por 0,5.
+
+Foi adicionada a funcionalidade de personalização das medidas usadas para o cálculo, para acessar clique no ícone da engrenagem.
+
+Link: https://thalis-freitas.github.io/churrascometro/
+
+![Gif para demonstração](https://github.com/Thalis-Freitas/churrascometro/blob/d834504cbbb80d621a0ae585a7e453acfca56fd6/demonstracao/gif.gif)
+
+## :computer: Tecnologias utilizadas
+
+O projeto foi desenvolvido utilizando as seguintes tecnologias:
+
+- HTML
+- CSS
+- JavaScript
